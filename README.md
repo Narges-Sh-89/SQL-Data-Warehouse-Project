@@ -53,26 +53,28 @@ Develop SQL-based analytics to uncover insights related to:
 
 These insights support data-driven decision-making and business strategy.
 
-## 📂 Data-warehouse-project
-``` text
-│
-├── datasets/                           # Raw datasets (ERP and CRM sources)
-│
-├── docs/                               # Documentation and architecture design
-│   ├── etl                             # ETL workflows and design diagrams
-│   ├── data_architecture               # Medallion architecture (Bronze/Silver/Gold)
-│   ├── data_catalog.md                 # Dataset metadata and field descriptions
-│   ├── data_flow                       # Data flow diagrams
-│   ├── data_models                     # Star schema data model design
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Raw data ingestion layer
-│   ├── silver/                         # Data cleaning and transformation layer
-│   ├── gold/                           # Analytical and reporting layer
-│
-├── tests/                              # Data validation and quality checks
-│
-├── README.md                           # Project documentation
-```
-
 ## 📂 Repository Structure
+
+```text
+data-warehouse-project/
+│
+├── datasets/                # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                    # Project documentation and architecture details
+│   ├── etl                  # File shows all different techniques and methods of ETL
+│   ├── data_architecture    # File shows the project's architecture
+│   ├── data_catalog         # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow            # File for the data flow diagram
+│   └── data_models          # File for data models (star schema) 
+│
+├── scripts/                 # SQL scripts for ETL and transformations
+│   ├── bronze/              # Scripts for extracting and loading raw data
+│   ├── silver/              # Scripts for cleaning and transforming data
+│   └── gold/                # Scripts for creating analytical models
+│
+├── tests/                   # Test scripts and quality files
+│
+├── README.md                # Project overview and instructions
+├── .gitignore
+└── requirements.txt
+```
