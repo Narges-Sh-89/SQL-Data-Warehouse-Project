@@ -53,7 +53,8 @@ Develop SQL-based analytics to uncover insights related to:
 
 These insights support data-driven decision-making and business strategy.
 
-## 📂 Data-warehouse-project/
+## 📂 Data-warehouse-project
+``` text
 │
 ├── datasets/                           # Raw datasets (ERP and CRM sources)
 │
@@ -72,6 +73,6 @@ These insights support data-driven decision-making and business strategy.
 ├── tests/                              # Data validation and quality checks
 │
 ├── README.md                           # Project documentation
-
+```
 
 ## 📂 Repository Structure
