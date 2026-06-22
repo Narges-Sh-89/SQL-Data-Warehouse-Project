@@ -77,4 +77,7 @@ data-warehouse-project/
 ├── README.md                # Project overview and instructions
 ├── .gitignore
 └── requirements.txt
+│
+│
+├── Analytics/              # SQL analysis scripts covering sales, customer, and product insights
 ```
