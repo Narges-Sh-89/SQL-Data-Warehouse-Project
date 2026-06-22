@@ -18,6 +18,7 @@ SELECT
     DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) AS order_range_months
 FROM Gold.fact_sales;
 
+===============================================================================
 -- Find the youngest and oldest customers based on birthdate
 SELECT
     MIN(birthdate) AS oldest_birthdate,
