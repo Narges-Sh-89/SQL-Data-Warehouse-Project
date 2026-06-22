@@ -20,8 +20,8 @@ SQL Functions Used:
 SELECT TOP 5
     P.product_name,
     SUM(S.sales_amount) AS total_revenue
-FROM Gold.fact_sales S
-LEFT JOIN Gold.dim_products P
+FROM Gold.fact_sales AS S
+LEFT JOIN Gold.dim_products AS P
     ON P.product_key = S.product_key
 GROUP BY P.product_name
 ORDER BY total_revenue DESC;
@@ -35,8 +35,8 @@ FROM (
         P.product_name,
         SUM(S.sales_amount) AS total_revenue,
         RANK() OVER (ORDER BY SUM(S.sales_amount) DESC) AS rank_products
-    FROM Gold.fact_sales S
-    LEFT JOIN Gold.dim_products P
+    FROM Gold.fact_sales AS S
+    LEFT JOIN Gold.dim_products AS P
         ON P.product_key = S.product_key
     GROUP BY P.product_name
 ) AS ranked_products
@@ -48,8 +48,8 @@ WHERE rank_products <= 5;
 SELECT TOP 5
     P.product_name,
     SUM(S.sales_amount) AS total_revenue
-FROM Gold.fact_sales S
-LEFT JOIN Gold.dim_products P
+FROM Gold.fact_sales AS S
+LEFT JOIN Gold.dim_products AS P
     ON P.product_key = S.product_key
 GROUP BY P.product_name
 ORDER BY total_revenue;
@@ -62,8 +62,8 @@ SELECT TOP 10
     C.first_name,
     C.last_name,
     SUM(S.sales_amount) AS total_revenue
-FROM Gold.fact_sales S
-LEFT JOIN Gold.dim_customers C
+FROM Gold.fact_sales AS S
+LEFT JOIN Gold.dim_customers AS C
     ON C.customer_key = S.customer_key
 GROUP BY 
     C.customer_key,
@@ -79,8 +79,8 @@ SELECT TOP 3
     C.first_name,
     C.last_name,
     COUNT(DISTINCT order_number) AS total_orders
-FROM Gold.fact_sales S
-LEFT JOIN Gold.dim_customers C
+FROM Gold.fact_sales AS S
+LEFT JOIN Gold.dim_customers AS C
     ON C.customer_key = S.customer_key
 GROUP BY 
     C.customer_key,
